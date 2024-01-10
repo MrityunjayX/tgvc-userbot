@@ -21,9 +21,10 @@ import logging
 
 from pyrogram import Client, idle
 
-API_ID = int(environ["API_ID"])
-API_HASH = environ["API_HASH"]
-SESSION_NAME = environ["SESSION_NAME"]
+    
+API_ID = int(environ.get("API_ID", 6))
+API_HASH = environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
+SESSION_NAME = environ.get("SESSION_NAME", None)
 
 PLUGINS = dict(
     root="plugins",
